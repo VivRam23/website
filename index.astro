@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Challenge from '../components/Challenge.astro';
+import HowIHelp from '../components/HowIHelp.astro';
+import Proof from '../components/Proof.astro';
+import SelectedWork from '../components/SelectedWork.astro';
+import HowIWork from '../components/HowIWork.astro';
+import AboutTeaser from '../components/AboutTeaser.astro';
+import AiNative from '../components/AiNative.astro';
+import FinalCta from '../components/FinalCta.astro';
+
+const title = 'Viviana Rames — Marketing & GTM for complex products and emerging technologies';
+const description =
+  'Senior marketing and GTM operator specializing in complex products and emerging technologies. Fractional, interim and project-based leadership in positioning, product marketing, GTM strategy and communications — with deep credibility in climate and deep tech.';
+---
+
+<BaseLayout title={title} description={description} path="/">
+  <Hero />
+  <Challenge />
+  <HowIHelp />
+  <Proof />
+  <SelectedWork />
+  <HowIWork />
+  <AboutTeaser />
+  <AiNative />
+  <FinalCta />
+</BaseLayout>

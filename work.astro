@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CaseStudyFull from '../components/CaseStudyFull.astro';
+import { caseStudies } from '../data/site';
+
+const title = 'Selected Work — Viviana Rames';
+const description =
+  'Case studies in positioning, go-to-market strategy and brand building for Skytree, Capture6 and Brush It On — entering a market, building a function, and building a company.';
+---
+
+<BaseLayout title={title} description={description} path="/work">
+  <section class="border-b border-ink/10">
+    <div class="section-inner section !pb-12">
+      <p class="eyebrow">Selected work</p>
+      <h1 class="mt-3 max-w-2xl text-4xl sm:text-5xl">Entering a market. Building a function. Building a company.</h1>
+      <p class="mt-5 max-w-xl text-base leading-relaxed text-ink/75">
+        Three examples of how I think and operate, not just what I delivered.
+      </p>
+
+      <nav aria-label="Case studies" class="mt-8 flex flex-wrap gap-3">
+        {caseStudies.map((cs) => (
+          <a
+            href={`#${cs.slug}`}
+            class="rounded-full border border-ink/15 px-4 py-2 text-sm font-medium text-ink/80 hover:border-olive hover:text-ink"
+          >
+            {cs.name}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <div class="section-inner px-6 sm:px-10 lg:px-16">
+    {caseStudies.map((cs, i) => <CaseStudyFull cs={cs} index={i} />)}
+  </div>
+</BaseLayout>

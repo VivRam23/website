@@ -1,0 +1,42 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="relative overflow-hidden border-b border-ink/10">
+  <div class="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 lg:block" aria-hidden="true">
+    <svg viewBox="0 0 600 600" class="h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="450" y1="0" x2="450" y2="600" stroke="#1C1B16" stroke-opacity="0.08" />
+      <line x1="150" y1="80" x2="600" y2="80" stroke="#1C1B16" stroke-opacity="0.08" />
+      <line x1="150" y1="330" x2="600" y2="330" stroke="#1C1B16" stroke-opacity="0.08" />
+      <line x1="450" y1="80" x2="600" y2="230" stroke="#1C1B16" stroke-opacity="0.1" />
+      <circle cx="450" cy="80" r="4" fill="#C08A4E" />
+      <circle cx="450" cy="330" r="3" fill="#1C1B16" fill-opacity="0.25" />
+      <circle cx="330" cy="460" r="2.5" fill="#1C1B16" fill-opacity="0.15" />
+    </svg>
+  </div>
+
+  <div class="section-inner section relative">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl leading-[1.05] tracking-tight sm:text-6xl">
+        Turn your mission
+        <span class="block text-olive">into traction.</span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink/80">
+        I help companies turn complex products and emerging technologies into clear stories, focused go-to-market strategies, and measurable commercial momentum.
+      </p>
+
+      <p class="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-stone-600">
+        Positioning &middot; Product Marketing &middot; GTM &middot; Communications
+      </p>
+
+      <p class="mt-6 max-w-xl text-sm leading-relaxed text-stone-600">
+        Deep, credible experience in climate and deep tech — applied to any company navigating a complex product and an emerging category.
+      </p>
+
+      <div class="mt-8">
+        <a href={`mailto:${site.email}`} class="btn-primary">Let's talk</a>
+      </div>
+    </div>
+  </div>
+</section>

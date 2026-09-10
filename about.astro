@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+
+const title = 'About — Viviana Rames';
+const description =
+  'Viviana Rames is a senior marketing and GTM leader with 15+ years of experience across climate tech, deep tech and consumer brands — building marketing functions, leading market entry, and founding and exiting her own company.';
+---
+
+<BaseLayout title={title} description={description} path="/about">
+  <section class="border-b border-ink/10">
+    <div class="section-inner section">
+      <p class="eyebrow">About</p>
+      <h1 class="mt-3 text-5xl sm:text-6xl">Viviana Rames</h1>
+
+      <div class="mt-12 grid gap-12 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-16">
+        <div class="flex flex-col items-start gap-4">
+          <img
+            src="/images/portrait.jpg"
+            alt="Portrait of Viviana Rames"
+            class="h-48 w-48 rounded-full object-cover"
+            width="192"
+            height="192"
+          />
+          <a
+            href={site.linkedin}
+            rel="me noopener"
+            target="_blank"
+            class="text-sm font-medium text-ink/80 hover:text-ink"
+          >
+            LinkedIn ↗
+          </a>
+          <a href={`mailto:${site.email}`} class="btn-primary mt-2">Let's talk</a>
+        </div>
+
+        <div class="max-w-2xl space-y-6 text-lg leading-relaxed text-ink/85">
+          <p>
+            I'm a senior marketing and GTM leader with 15+ years of experience turning complex products into compelling propositions and building the systems that take them to market.
+          </p>
+          <p>
+            I've built marketing functions from zero, led positioning and North American expansion for emerging technologies, managed international teams and programs, and founded, scaled and exited my own sustainability business.
+          </p>
+          <p>
+            I've worked across multiple industries and international markets, but I'm most at home in businesses doing something new — where the market is still forming, the product takes some explaining, and there's no established playbook to follow.
+          </p>
+          <p>
+            That combination of operator and founder experience shapes how I work: commercially focused, comfortable with ambiguity, and willing to move from strategy into execution when that's what the business needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

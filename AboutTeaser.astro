@@ -1,0 +1,42 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="border-b border-ink/10">
+  <div class="section-inner section">
+    <p class="eyebrow">About</p>
+    <h2 class="mt-3 text-4xl sm:text-5xl">Viviana Rames</h2>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16">
+      <div class="flex flex-col items-start gap-4">
+        <img
+          src="/images/portrait.jpg"
+          alt="Portrait of Viviana Rames"
+          class="h-40 w-40 rounded-full object-cover"
+          width="160"
+          height="160"
+        />
+        <a
+          href={site.linkedin}
+          rel="me noopener"
+          target="_blank"
+          class="text-sm font-medium text-ink/80 hover:text-ink"
+        >
+          LinkedIn ↗
+        </a>
+      </div>
+
+      <div class="max-w-2xl">
+        <p class="text-lg leading-relaxed text-ink/85">
+          I'm a senior marketing and GTM leader with 15+ years of experience turning complex products into compelling propositions and building the systems that take them to market.
+        </p>
+        <p class="mt-4 text-base leading-relaxed text-ink/75">
+          I've built marketing functions from zero, led positioning and North American expansion for emerging technologies, managed international teams and programs, and founded, scaled and exited my own sustainability business.
+        </p>
+        <a href="/about" class="mt-6 inline-block text-sm font-medium text-olive hover:underline">
+          More about my background →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

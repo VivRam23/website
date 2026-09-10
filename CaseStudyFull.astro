@@ -1,0 +1,109 @@
+---
+import type { CaseStudy } from '../data/site';
+
+export interface Props {
+  cs: CaseStudy;
+  index: number;
+}
+
+const { cs, index } = Astro.props;
+---
+
+<article id={cs.slug} class="scroll-mt-24 border-b border-ink/10 py-20 first:pt-0 lg:py-28">
+  <div class="flex flex-wrap items-center gap-4">
+    <img src={cs.logo} alt={`${cs.name} logo`} class="h-9 w-auto object-contain" loading="lazy" />
+    <span class="text-sm text-stone-600">{cs.role}</span>
+  </div>
+
+  <h2 class="mt-6 max-w-3xl text-3xl leading-tight sm:text-4xl">{cs.theme}</h2>
+
+  <ul class="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm text-clay-600">
+    {cs.tags.map((tag, i) => (
+      <li>{tag}{i < cs.tags.length - 1 ? ' ·' : ''}</li>
+    ))}
+  </ul>
+
+  <a
+    href={cs.url}
+    target="_blank"
+    rel="noopener"
+    class="mt-4 inline-block text-sm font-medium text-olive hover:underline"
+  >
+    {cs.url.replace('https://', '')} ↗
+  </a>
+
+  <div class="mt-14 grid gap-12 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16">
+    <div class="space-y-8 lg:space-y-10">
+      <div>
+        <p class="text-xs font-medium uppercase tracking-[0.1em] text-stone-600">Context</p>
+      </div>
+      <div>
+        <p class="text-xs font-medium uppercase tracking-[0.1em] text-stone-600">Challenge</p>
+      </div>
+      <div>
+        <p class="text-xs font-medium uppercase tracking-[0.1em] text-stone-600">My role</p>
+      </div>
+      <div>
+        <p class="text-xs font-medium uppercase tracking-[0.1em] text-stone-600">Approach &amp; execution</p>
+      </div>
+      <div>
+        <p class="text-xs font-medium uppercase tracking-[0.1em] text-stone-600">Outcomes</p>
+      </div>
+    </div>
+
+    <div class="space-y-12 lg:space-y-14">
+      <p class="max-w-2xl text-base leading-relaxed text-ink/85">{cs.context}</p>
+
+      <ul class="max-w-2xl space-y-2 text-base leading-relaxed text-ink/85">
+        {cs.challenges.map((c) => (
+          <li class="flex gap-3">
+            <span class="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-clay"></span>
+            <span>{c}</span>
+          </li>
+        ))}
+      </ul>
+
+      <p class="max-w-2xl text-base leading-relaxed text-ink/85">{cs.role_detail}</p>
+
+      <div class="space-y-10">
+        {cs.approach.map((section) => (
+          <div>
+            <h3 class="text-lg text-ink">{section.heading}</h3>
+            <ul class="mt-3 max-w-2xl space-y-2 text-base leading-relaxed text-ink/80">
+              {section.items.map((item) => (
+                <li class="flex gap-3">
+                  <span class="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-ink/25"></span>
+                  <span>{item.body}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <ul class="max-w-2xl space-y-2 text-base leading-relaxed text-ink/85">
+        {cs.outcomes.map((o) => (
+          <li class="flex gap-3">
+            <span class="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-olive"></span>
+            <span>{o}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-16">
+    <p class="eyebrow">Examples of work</p>
+    <div class="mt-6 grid gap-6 sm:grid-cols-3">
+      {cs.examples.map((ex) => (
+        <figure class="overflow-hidden rounded-sm border border-ink/10 bg-cream-alt">
+          <img src={ex.image} alt={ex.alt} class="h-44 w-full object-cover" loading="lazy" />
+          <figcaption class="p-4">
+            <p class="text-sm font-medium text-ink">{ex.caption}</p>
+            <p class="mt-1 text-sm leading-snug text-stone-600">{ex.description}</p>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,74 @@
+---
+// Abstract chaos → clarity → growth motif.
+// A tangled knot of thin grey lines resolves into a single, clear
+// orange trajectory moving up and to the right.
+---
+
+<svg
+  viewBox="0 0 640 400"
+  class="hero-graphic h-full w-full"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Abstract illustration of tangled lines resolving into a single clear upward trajectory"
+>
+  <!-- chaotic / tangled strands -->
+  <path d="M15 230 C 70 180, 45 300, 110 260 S 160 320, 175 280 S 130 210, 200 260" class="strand" stroke-width="1.2" opacity="0.5" />
+  <path d="M10 300 C 80 340, 50 250, 120 290 S 170 250, 190 275" class="strand" stroke-width="1.2" opacity="0.45" />
+  <path d="M25 360 C 90 320, 60 380, 130 350 S 175 300, 195 280" class="strand" stroke-width="1.1" opacity="0.4" />
+  <path d="M30 170 C 90 210, 55 150, 125 195 S 175 260, 198 273" class="strand" stroke-width="1.1" opacity="0.4" />
+  <path d="M45 140 C 100 170, 70 120, 140 160 S 185 240, 202 270" class="strand" stroke-width="1" opacity="0.35" />
+  <path d="M20 265 C 85 265, 60 230, 135 250 S 180 265, 205 272" class="strand" stroke-width="1" opacity="0.35" />
+
+  <!-- single, clear trajectory -->
+  <path
+    d="M202 268 C 270 250, 320 190, 370 150 S 480 70, 578 62"
+    class="trajectory"
+    stroke-width="2.75"
+    stroke-linecap="round"
+  />
+
+  <circle cx="578" cy="62" r="6" class="trajectory-dot" />
+</svg>
+
+<style>
+  .strand {
+    stroke: #B4B1A6;
+  }
+
+  .trajectory {
+    stroke: #F15A24;
+    stroke-dasharray: 520;
+    stroke-dashoffset: 520;
+    animation: draw 1.6s ease-out 0.2s forwards;
+  }
+
+  .trajectory-dot {
+    fill: #F15A24;
+    opacity: 0;
+    animation: fade-in 0.6s ease-out 1.6s forwards;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .trajectory {
+      stroke-dashoffset: 0;
+      animation: none;
+    }
+    .trajectory-dot {
+      opacity: 1;
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+import { site, proofStats, engagementModels } from '../data/site';
+---
+
+<section class="border-b border-grey-200 bg-paper-alt">
+  <div class="section-inner section">
+    <div class="grid gap-12 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16">
+      <div class="flex flex-row items-center gap-4 lg:flex-col lg:items-start">
+        <img
+          src="/images/portrait.jpg"
+          alt="Portrait of Viviana Rames"
+          class="h-20 w-20 flex-none object-cover grayscale lg:h-40 lg:w-40"
+          width="160"
+          height="160"
+        />
+        <div class="lg:mt-4">
+          <p class="eyebrow">About</p>
+          <a
+            href={site.linkedin}
+            rel="me noopener"
+            target="_blank"
+            class="mt-2 block text-sm font-semibold text-ink hover:text-orange"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="max-w-2xl text-3xl leading-snug sm:text-4xl">
+          A senior marketing and GTM leader, 15+ years turning complex products into commercial momentum.
+        </h2>
+        <p class="mt-5 max-w-2xl text-base leading-relaxed text-grey-700">
+          I've built marketing functions from zero, led positioning and North American expansion for emerging technologies, and founded, scaled and exited my own sustainability business. I'm most at home where the market is still forming and there's no established playbook.
+        </p>
+
+        <a href="/about" class="mt-4 inline-block text-sm font-semibold text-ink underline decoration-orange decoration-2 underline-offset-4 hover:text-orange">
+          More about my background →
+        </a>
+
+        <dl class="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-grey-200 pt-8 sm:grid-cols-5">
+          {proofStats.map((stat) => (
+            <div>
+              <dt class="sr-only">{stat.label}</dt>
+              <dd class="font-display text-2xl font-bold text-ink">{stat.value}</dd>
+              <p class="mt-1 text-xs leading-snug text-grey-600">{stat.label}</p>
+            </div>
+          ))}
+        </dl>
+
+        <p class="mt-8 max-w-2xl text-sm leading-relaxed text-grey-600">
+          I work {engagementModels.map((m) => m.title.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1')} — and I'll also consider the right senior permanent role.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

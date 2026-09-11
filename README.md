@@ -2,6 +2,8 @@
 
 Viviana Rames' professional site — built with [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com). Fully static, server-rendered HTML (no client-side rendering required for content), deployable to Vercel.
 
+**Visual identity (v2):** off-white background, near-black type, one orange accent (`#F15A24`), Archivo (display) + Inter (body). No olive/serif/cream — that was the v1 palette and has been fully replaced. See `tailwind.config.mjs` for tokens.
+
 ## Structure
 
 ```

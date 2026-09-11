@@ -4,31 +4,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#F8F6F0',
-        'cream-alt': '#F0EFE6',
-        ink: '#1C1B16',
-        olive: {
-          DEFAULT: '#5B6B45',
-          dark: '#48542E',
-          700: '#4A5638',
-          600: '#5B6B45',
-          500: '#6E7F55',
+        paper: '#F7F6F2',
+        'paper-alt': '#EFEDE7',
+        ink: '#121210',
+        grey: {
+          50: '#F7F6F2',
+          200: '#E3E1D9',
+          400: '#B4B1A6',
+          500: '#8C8A7F',
+          600: '#6D6B61',
+          700: '#4C4A43',
         },
-        clay: {
-          DEFAULT: '#C08A4E',
-          600: '#B67B3B',
-        },
-        stone: {
-          DEFAULT: '#8A8578',
-          600: '#716C60',
+        orange: {
+          DEFAULT: '#F15A24',
+          600: '#D9491A',
+          700: '#B83B14',
+          50: '#FDEEE7',
         },
       },
       fontFamily: {
-        display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+        display: ['"Archivo"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
         prose: '68ch',
+      },
+      letterSpacing: {
+        widest2: '0.16em',
       },
     },
   },

@@ -2,32 +2,30 @@
 import { howIHelp, site } from '../data/site';
 ---
 
-<section class="border-b border-ink/10">
+<section class="border-b border-grey-200">
   <div class="section-inner section">
-    <p class="eyebrow">How I help</p>
+    <p class="eyebrow">What I do</p>
     <h2 class="mt-3 text-4xl sm:text-5xl">Where I come in</h2>
 
-    <div class="mt-14 divide-y divide-ink/10 border-t border-ink/10">
+    <div class="mt-14 divide-y divide-grey-200 border-t border-grey-200">
       {howIHelp.map((item) => (
-        <div class="grid gap-4 py-10 sm:grid-cols-[80px_minmax(0,1fr)] sm:gap-8 lg:grid-cols-[100px_minmax(0,1fr)]">
-          <span class="font-display text-3xl text-clay">{item.number}</span>
+        <div class="grid gap-3 py-10 sm:grid-cols-[90px_minmax(0,1fr)] sm:gap-8 lg:grid-cols-[110px_minmax(0,1fr)]">
+          <span class="font-display text-3xl font-bold text-grey-400">{item.number}</span>
           <div>
             <h3 class="text-2xl sm:text-3xl">{item.title}</h3>
-            <p class="mt-3 max-w-2xl text-base leading-relaxed text-ink/80">{item.description}</p>
-            <ul class="mt-5 flex flex-wrap gap-2">
-              {item.tags.map((tag) => (
-                <li class="rounded-full border border-ink/10 bg-cream-alt px-3 py-1 text-sm text-ink/70">
-                  {tag}
-                </li>
-              ))}
-            </ul>
+            <p class="mt-3 max-w-2xl text-base leading-relaxed text-grey-700">{item.description}</p>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-widest2 text-grey-500">
+              {item.tags.join(' / ')}
+            </p>
           </div>
         </div>
       ))}
     </div>
 
     <div class="mt-12">
-      <a href={`mailto:${site.email}`} class="btn-primary">Let's talk →</a>
+      <a href={`mailto:${site.email}`} class="text-sm font-semibold uppercase tracking-widest2 text-orange hover:text-orange-600">
+        Let's talk →
+      </a>
     </div>
   </div>
 </section>

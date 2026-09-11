@@ -2,31 +2,43 @@
 import { caseStudies } from '../data/site';
 ---
 
-<section class="border-b border-ink/10">
+<section class="border-b border-grey-200">
   <div class="section-inner section">
     <p class="eyebrow">Selected work</p>
-    <h2 class="mt-3 text-4xl sm:text-5xl">Proof, in three moves</h2>
+    <h2 class="mt-3 max-w-xl text-4xl sm:text-5xl">Proof, in three moves</h2>
 
-    <div class="mt-14 grid gap-6 lg:grid-cols-3">
-      {caseStudies.map((cs) => (
-        <a
-          href={`/work#${cs.slug}`}
-          class="group flex flex-col rounded-sm border border-ink/10 bg-cream-alt p-7 transition-colors hover:border-olive/40"
-        >
-          <img src={cs.logo} alt={`${cs.name} logo`} class="h-8 w-auto object-contain object-left" loading="lazy" />
-          <p class="mt-5 text-xs font-medium uppercase tracking-[0.1em] text-clay-600">{cs.role}</p>
-          <h3 class="mt-2 text-xl leading-snug">{cs.theme}</h3>
-          <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/75">{cs.homepageSummary}</p>
-          <ul class="mt-6 flex flex-wrap gap-x-3 gap-y-1 text-xs text-stone-600">
-            {cs.tags.map((tag, i) => (
-              <li>{tag}{i < cs.tags.length - 1 ? ' ·' : ''}</li>
-            ))}
-          </ul>
-          <span class="mt-6 text-sm font-medium text-olive group-hover:underline">
-            View case study →
-          </span>
-        </a>
-      ))}
+    <div class="mt-16 divide-y divide-grey-200 border-t border-grey-200">
+      {caseStudies.map((cs, i) => {
+        const reversed = i % 2 === 1;
+        return (
+          <a href={`/work#${cs.slug}`} class="group grid gap-8 py-14 lg:grid-cols-12 lg:items-center lg:gap-10">
+            <div class:list={['lg:col-span-5', reversed ? 'lg:order-2' : 'lg:order-1']}>
+              <img
+                src={cs.examples[0].image}
+                alt={cs.examples[0].alt}
+                class:list={[
+                  'w-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0',
+                  i === 1 ? 'aspect-[4/3]' : 'aspect-[5/4]',
+                ]}
+                loading="lazy"
+              />
+            </div>
+
+            <div class:list={['lg:col-span-7', reversed ? 'lg:order-1' : 'lg:order-2']}>
+              <span class="font-display text-sm font-bold text-orange">0{i + 1}</span>
+              <p class="mt-2 text-xs font-semibold uppercase tracking-widest2 text-grey-500">{cs.role}</p>
+              <h3 class="mt-3 max-w-xl text-2xl leading-snug sm:text-3xl">{cs.theme}</h3>
+              <p class="mt-4 max-w-xl text-base leading-relaxed text-grey-700">{cs.homepageSummary}</p>
+              <p class="mt-5 text-xs font-semibold uppercase tracking-widest2 text-grey-500">
+                {cs.tags.join(' / ')}
+              </p>
+              <span class="mt-6 inline-block text-sm font-semibold text-ink underline decoration-orange decoration-2 underline-offset-4 group-hover:text-orange">
+                View case study →
+              </span>
+            </div>
+          </a>
+        );
+      })}
     </div>
   </div>
 </section>

@@ -26,6 +26,8 @@ public/
 
 ## Local development
 
+**Dependency versions are pinned exactly** (no `^`/`~`) in `package.json`. `@astrojs/sitemap` has a known compatibility break with certain Astro versions that surfaces as `Cannot read properties of undefined (reading 'reduce')` during build — don't loosen or bump these versions without testing the build first.
+
 ```bash
 npm install
 npm run dev

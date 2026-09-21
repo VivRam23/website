@@ -14,11 +14,11 @@ export const nav = [
 ];
 
 export const proofStats = [
-  { value: '15+ years', label: 'Leading marketing & GTM across climate, deep tech and consumer brands' },
-  { value: '0 → 1', label: 'Marketing functions built from zero, twice' },
-  { value: '250% YoY', label: 'Growth scaling my own brand to national distribution' },
-  { value: '150+', label: 'Retail & wholesale partners for a self-founded brand' },
-  { value: 'Up to 700%', label: 'Marketing ROI on specific campaigns and channels' },
+  { value: '15+ years', label: 'Marketing & GTM leadership' },
+  { value: '2× 0→1', label: 'Marketing functions built from zero' },
+  { value: '250% YoY', label: 'Revenue growth for own brand' },
+  { value: '150+', label: 'Retail & wholesale partners built' },
+  { value: '700% ROI', label: 'Campaign-level marketing return' },
 ];
 
 export const engagement = {
@@ -151,6 +151,6 @@ export const selectedWork: SelectedWorkItem[] = [
     logo: '/images/logo-crbonlabs-mono.png',
     logoAlt: 'Crbon Labs logo',
     description:
-      'Developed product positioning, messaging and value proposition. Created the complete product marketing package and engaged a designer to translate the strategy into a visual identity.',
+      'Defined the product positioning, messaging and value proposition, then built the full product marketing package and guided visual identity development with an external designer.',
   },
 ];

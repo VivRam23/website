@@ -8,7 +8,7 @@ export interface Props {
 const { service } = Astro.props;
 ---
 
-<article class="grid gap-8 border-t border-grey-200 py-14 first:pt-0 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)] lg:gap-16 lg:py-16">
+<article class="grid gap-8 border-t border-grey-200 py-14 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)] lg:gap-16 lg:py-16">
   <div>
     <span class="font-display text-2xl font-black text-orange">{service.number}</span>
     <h2 class="mt-3 text-3xl leading-tight sm:text-4xl">{service.title}</h2>

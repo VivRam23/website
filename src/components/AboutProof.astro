@@ -1,5 +1,5 @@
 ---
-import { site, proofStats, engagementModels } from '../data/site';
+import { site, proofStats } from '../data/site';
 ---
 
 <section class="border-b border-grey-200 bg-paper-alt">
@@ -9,7 +9,7 @@ import { site, proofStats, engagementModels } from '../data/site';
         <img
           src="/images/portrait.jpg"
           alt="Portrait of Viviana Rames"
-          class="h-20 w-20 flex-none object-cover grayscale lg:h-40 lg:w-40"
+          class="h-20 w-20 flex-none rounded-full object-cover lg:h-40 lg:w-40"
           width="160"
           height="160"
         />
@@ -47,10 +47,6 @@ import { site, proofStats, engagementModels } from '../data/site';
             </div>
           ))}
         </dl>
-
-        <p class="mt-8 max-w-2xl text-sm leading-relaxed text-grey-600">
-          I work {engagementModels.map((m) => m.title.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1')} — and I'll also consider the right senior permanent role.
-        </p>
       </div>
     </div>
   </div>

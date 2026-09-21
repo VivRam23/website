@@ -1,5 +1,5 @@
 ---
-import { site, proofStats } from '../data/site';
+import { site } from '../data/site';
 ---
 
 <section class="border-b border-grey-200 bg-paper-alt">
@@ -37,16 +37,6 @@ import { site, proofStats } from '../data/site';
         <a href="/about" class="mt-4 inline-block text-sm font-semibold text-ink underline decoration-orange decoration-2 underline-offset-4 hover:text-orange">
           More about my background →
         </a>
-
-        <dl class="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-grey-200 pt-8 sm:grid-cols-5">
-          {proofStats.map((stat) => (
-            <div>
-              <dt class="sr-only">{stat.label}</dt>
-              <dd class="font-display text-2xl font-bold text-ink">{stat.value}</dd>
-              <p class="mt-1 text-xs leading-snug text-grey-600">{stat.label}</p>
-            </div>
-          ))}
-        </dl>
       </div>
     </div>
   </div>

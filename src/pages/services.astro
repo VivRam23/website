@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import EngagementModels from '../components/EngagementModels.astro';
+import FinalCta from '../components/FinalCta.astro';
+import { servicesIntro, services } from '../data/site';
+
+const title = 'Services — Viviana Rames';
+const description =
+  'Positioning and product marketing, go-to-market strategy, marketing and communications, and fractional marketing leadership for companies with complex products and emerging technologies.';
+---
+
+<BaseLayout title={title} description={description} path="/services">
+  <section class="border-b border-grey-200">
+    <div class="section-inner section !pb-12">
+      <h1 class="max-w-2xl text-4xl sm:text-5xl">{servicesIntro.headline}</h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-grey-700">{servicesIntro.intro}</p>
+    </div>
+  </section>
+
+  <div class="section-inner px-6 sm:px-10 lg:px-16">
+    {services.map((service) => <ServiceSection service={service} />)}
+  </div>
+
+  <EngagementModels />
+  <FinalCta />
+</BaseLayout>

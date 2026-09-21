@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/work",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/work/:path*",
+      "destination": "/services",
+      "permanent": true
+    }
+  ]
+}

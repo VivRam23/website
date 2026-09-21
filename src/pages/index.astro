@@ -2,9 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Challenge from '../components/Challenge.astro';
-import HowIHelp from '../components/HowIHelp.astro';
+import ServicesPreview from '../components/ServicesPreview.astro';
 import SelectedWork from '../components/SelectedWork.astro';
-import AboutProof from '../components/AboutProof.astro';
+import ProofBand from '../components/ProofBand.astro';
+import AboutSection from '../components/AboutSection.astro';
 import FinalCta from '../components/FinalCta.astro';
 
 const title = 'Viviana Rames — Marketing & GTM for complex products and emerging technologies';
@@ -15,8 +16,9 @@ const description =
 <BaseLayout title={title} description={description} path="/">
   <Hero />
   <Challenge />
-  <HowIHelp />
+  <ServicesPreview />
   <SelectedWork />
-  <AboutProof />
+  <ProofBand />
+  <AboutSection />
   <FinalCta />
 </BaseLayout>

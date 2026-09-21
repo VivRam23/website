@@ -12,10 +12,10 @@ src/
                          engagement models, contact email. Start here for content edits.
   layouts/
     BaseLayout.astro   ← <head>, SEO meta, OG/Twitter tags, JSON-LD schema, nav + footer wrapper
-  components/          ← one component per homepage section, plus the full case-study block
+  components/          ← one component per homepage/services-page section
   pages/
     index.astro        ← homepage
-    work.astro          ← /work — all three case studies as anchor sections (#skytree, #capture6, #brush-it-on)
+    services.astro       ← /services — four service areas + engagement models
     about.astro          ← /about — full bio
 public/
   images/               ← logos, case-study images, portrait, OG image, favicon
@@ -23,6 +23,8 @@ public/
 ```
 
 `sitemap.xml` is generated automatically at build time by `@astrojs/sitemap` — you won't find it in the repo, it appears in `dist/` after `npm run build`.
+
+`vercel.json` redirects the retired `/work` route (301) to `/services`, since the detailed case-study page no longer exists.
 
 ## Local development
 

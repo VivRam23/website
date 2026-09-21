@@ -1,0 +1,19 @@
+---
+import { engagement } from '../data/site';
+---
+
+<section class="border-b border-t border-grey-200 bg-paper-alt">
+  <div class="section-inner section">
+    <h2 class="max-w-2xl text-3xl leading-tight sm:text-4xl">{engagement.heading}</h2>
+    <p class="mt-5 max-w-2xl text-base leading-relaxed text-grey-700">{engagement.intro}</p>
+
+    <div class="mt-12 grid gap-10 sm:grid-cols-3">
+      {engagement.models.map((model) => (
+        <div class="border-t-2 border-orange pt-5">
+          <h3 class="text-xl">{model.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-grey-700">{model.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -2,8 +2,20 @@
 import HeroGraphic from './HeroGraphic.astro';
 ---
 
-<section class="border-b border-grey-200">
-  <div class="section-inner grid gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[3fr_2fr] lg:items-center lg:gap-8 lg:px-16 lg:py-28">
+<section class="relative overflow-hidden border-b border-grey-200">
+  <div
+    class="pointer-events-none absolute inset-0"
+    style="background-image: linear-gradient(to right, rgba(18,18,16,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(18,18,16,0.05) 1px, transparent 1px); background-size: 88px 88px;"
+    aria-hidden="true"
+  >
+    <svg class="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="616" cy="88" r="2.5" fill="none" stroke="rgba(18,18,16,0.16)" stroke-width="1" />
+      <circle cx="880" cy="264" r="2.5" fill="none" stroke="rgba(18,18,16,0.16)" stroke-width="1" />
+      <circle cx="1144" cy="176" r="2" fill="rgba(241,90,36,0.5)" />
+    </svg>
+  </div>
+
+  <div class="section-inner relative z-10 grid gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[3fr_2fr] lg:items-center lg:gap-8 lg:px-16 lg:py-28">
     <div class="max-w-2xl">
       <h1 class="text-4xl leading-[1.1] tracking-tight sm:text-5xl lg:text-[44px] xl:text-[52px]">
         <span class="block font-medium text-ink">
@@ -23,7 +35,7 @@ import HeroGraphic from './HeroGraphic.astro';
       </p>
     </div>
 
-    <div class="mx-auto w-full max-w-sm lg:max-w-none">
+    <div class="mx-auto w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[300px]">
       <HeroGraphic />
     </div>
   </div>

@@ -151,6 +151,6 @@ export const selectedWork: SelectedWorkItem[] = [
     logo: '/images/logo-crbonlabs-mono.png',
     logoAlt: 'Crbon Labs logo',
     description:
-      'Defined the product positioning, messaging and value proposition, then built the full product marketing package and guided visual identity development with an external designer.',
+      'Developed product positioning, messaging and value proposition. Created the complete product marketing package and directed the translation of the strategy into a visual identity.',
   },
 ];

@@ -17,8 +17,8 @@ export const proofStats = [
   { value: '15+ years', label: 'Marketing & GTM leadership' },
   { value: '2× 0→1', label: 'Marketing functions built from zero' },
   { value: '250% YoY', label: 'Growth for self-founded brand' },
-  { value: '150+', label: 'Retail & wholesale partner network' },
-  { value: '700% ROI', label: 'Campaign-level marketing ROI' },
+  { value: '150+', label: 'Partner network built' },
+  { prefix: 'Up to', value: '700% ROI', label: 'Campaign-level marketing ROI' },
 ];
 
 export const engagement = {

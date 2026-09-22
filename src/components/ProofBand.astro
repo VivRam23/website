@@ -1,16 +1,27 @@
 ---
 import { proofStats } from '../data/site';
+const [featured, ...rest] = proofStats;
 ---
 
 <section class="bg-ink">
   <div class="section-inner section !py-16 lg:!py-20">
-    <div class="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-5 sm:gap-x-6">
-      {proofStats.map((stat, i) => (
-        <div class:list={[i === proofStats.length - 1 ? 'col-span-2 sm:col-span-1' : '']}>
-          <p class="whitespace-nowrap font-display text-3xl font-black text-orange sm:text-4xl">{stat.value}</p>
-          <p class="mt-3 max-w-[22ch] text-sm leading-snug text-paper/80">{stat.label}</p>
-        </div>
-      ))}
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:items-center lg:gap-16">
+      <div>
+        <p class="font-display text-5xl font-black text-orange sm:text-6xl">{featured.value}</p>
+        <p class="mt-4 max-w-[20ch] text-base leading-snug text-paper/80">{featured.label}</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-x-10 gap-y-10 sm:gap-x-12 sm:gap-y-12">
+        {rest.map((stat) => (
+          <div>
+            <p class="whitespace-nowrap font-display text-3xl font-black text-orange sm:text-4xl">
+              {stat.prefix && <span class="mr-1.5 text-base font-semibold align-middle text-orange/70">{stat.prefix}</span>}
+              {stat.value}
+            </p>
+            <p class="mt-3 max-w-[20ch] text-sm leading-snug text-paper/80">{stat.label}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>

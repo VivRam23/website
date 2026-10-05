@@ -1,0 +1,60 @@
+---
+import type { PortfolioImage } from '../data/portfolio';
+
+export interface Props {
+  image: PortfolioImage;
+  /** Load immediately (use for images visible without scrolling). */
+  eager?: boolean;
+}
+
+const { image, eager = false } = Astro.props;
+const style = image.maxWidth ? `max-width:${image.maxWidth}px` : undefined;
+---
+
+<figure style={style}>
+  {image.href ? (
+    <a
+      href={image.href}
+      target="_blank"
+      rel="noopener"
+      class="group relative block overflow-hidden border border-grey-200"
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        class="h-auto w-full"
+      />
+      <span class="absolute bottom-3 left-3 bg-ink px-4 py-2 text-xs font-semibold uppercase tracking-widest2 text-paper transition-colors group-hover:bg-orange">
+        {image.linkLabel} ↗<span class="sr-only"> (opens in a new tab)</span>
+      </span>
+    </a>
+  ) : image.staticSrc ? (
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset={image.staticSrc} />
+      <img
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        class="h-auto w-full border border-grey-200"
+      />
+    </picture>
+  ) : (
+    <img
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      class="h-auto w-full border border-grey-200"
+    />
+  )}
+  {image.caption && <figcaption class="mt-2 text-[13px] leading-snug text-grey-600">{image.caption}</figcaption>}
+</figure>

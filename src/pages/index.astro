@@ -1,24 +1,441 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Challenge from '../components/Challenge.astro';
-import ServicesPreview from '../components/ServicesPreview.astro';
-import SelectedWork from '../components/SelectedWork.astro';
-import ProofBand from '../components/ProofBand.astro';
-import AboutSection from '../components/AboutSection.astro';
-import FinalCta from '../components/FinalCta.astro';
-
-const title = 'Viviana Rames — Marketing & GTM for complex products and emerging technologies';
-const description =
-  'Senior marketing and GTM operator specializing in complex products and emerging technologies. Fractional, interim and project-based leadership in positioning, product marketing, GTM strategy and communications — with deep credibility in climate and deep tech.';
+import '../styles/global.css';
+const title = 'Viviana Rames | Marketing for Complex Products';
+const description = 'Marketing and go-to-market ownership for funded founders building complex or emerging technology. Clarity first, then traction, owned end to end.';
+const canonical = 'https://www.vivrames.com/';
+const ogImage = 'https://www.vivrames.com/images/og-default.jpg';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Viviana Rames',
+  url: canonical,
+  description,
+  founder: { '@type': 'Person', name: 'Viviana Rames', sameAs: ['https://www.linkedin.com/in/vivianarames/'] },
+  email: 'hello@vivrames.com',
+};
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,100..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body style="margin:0;background:#F7F6F2;color:#121212;font-family:Inter,system-ui,sans-serif;">
 
-<BaseLayout title={title} description={description} path="/">
-  <Hero />
-  <Challenge />
-  <ServicesPreview />
-  <SelectedWork />
-  <ProofBand />
-  <AboutSection />
-  <FinalCta />
-</BaseLayout>
+
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #121212; background: #F7F6F2; width: 100%;">
+
+  <!-- NAV -->
+  <header style="border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 18px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="#top" class="navlink eyebrow" style="font-size: 15px; font-weight: 700; letter-spacing: 0.2em; color: #121212;">Viviana Rames</a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px;">
+        <a href="#proof" class="navlink eyebrow" style="color: #4A4A47;">Work</a>
+        <a href="#how" class="navlink eyebrow" style="color: #4A4A47;">How I Work</a>
+        <a href="#about" class="navlink eyebrow" style="color: #4A4A47;">About</a>
+        <a href="#contact" class="navlink eyebrow" style="color: #4A4A47;">Contact</a>
+        <a href="https://calendly.com/hello-vivrames/30min" target="_blank" rel="noopener" class="btn eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #C4491B; color: #FFFFFF; text-decoration: none; font-size: 13px;">Book a conversation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="position: relative; overflow: hidden; border-bottom: 1px solid #D9D7D0;">
+    <div class="gridlayer" aria-hidden="true"></div>
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 128px 40px 120px;">
+      <p class="eyebrow" style="margin: 0 0 36px; font-weight: 500; color: #6B6A66;">Marketing &amp; GTM for complex products and emerging technologies</p>
+      <h1 class="disp" style="margin: 0; max-width: 1120px; font-weight: 800; font-stretch: 100%; font-size: clamp(38px, 5.4vw, 78px); line-height: 1.04; letter-spacing: -0.04em; text-wrap: balance;">As <span style="color: #E0653A;">commercially compelling</span> as you are technically strong.</h1>
+      <p style="margin: 40px 0 0; max-width: 580px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.55; color: #3A3A37;">Your product is strong. Growth still has to catch up. I build the foundation first, then run the motion that turns it into traction.</p>
+      <div style="margin-top: 44px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 36px;">
+        <a href="https://calendly.com/hello-vivrames/30min" target="_blank" rel="noopener" class="btn eyebrow" style="display: inline-flex; align-items: center; gap: 14px; min-height: 68px; padding: 0 36px; background: #C4491B; color: #FFFFFF; text-decoration: none; font-size: 15px;">Book a conversation <span aria-hidden="true">→</span></a>
+      </div>
+      <p style="margin: 18px 0 0; font-size: 14px; line-height: 1.5; color: #6B6A66;">30-minute fit check. Not a pitch.</p>
+    </div>
+  </section>
+
+  <!-- PROOF STRIP -->
+  <section aria-label="Track record" style="border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      <div style="padding: 36px 28px 36px 0; border-right: 1px solid #D9D7D0;">
+        <div class="disp" style="font-weight: 800; font-stretch: 112%; font-size: 44px; line-height: 1.1; letter-spacing: -0.03em;">15+</div>
+        <div style="margin-top: 8px; min-height: 42px; font-size: 14px; line-height: 1.5; color: #4A4A47;">years in marketing and go-to-market, from consumer to enterprise</div>
+      </div>
+      <div style="padding: 36px 28px; border-right: 1px solid #D9D7D0;">
+        <div class="disp" style="font-weight: 800; font-stretch: 112%; font-size: 44px; line-height: 1.1; letter-spacing: -0.03em;">2<span style="line-height: 0;">×</span> 0<span style="line-height: 0;">→</span>1</div>
+        <div style="margin-top: 8px; min-height: 42px; font-size: 14px; line-height: 1.5; color: #4A4A47;">marketing functions built from the ground up</div>
+      </div>
+      <div style="padding: 36px 28px; border-right: 1px solid #D9D7D0;">
+        <div class="disp" style="font-weight: 800; font-stretch: 112%; font-size: 44px; line-height: 1.1; letter-spacing: -0.03em;">4<span style="line-height: 0;">×</span></div>
+        <div style="margin-top: 8px; min-height: 42px; font-size: 14px; line-height: 1.5; color: #4A4A47;">monthly organic inbound enquiries within a year at a seed-stage climate tech company</div>
+      </div>
+      <div style="padding: 36px 0 36px 28px;">
+        <div class="disp" style="font-weight: 800; font-stretch: 112%; font-size: 44px; line-height: 1.1; letter-spacing: -0.03em;">250%</div>
+        <div style="margin-top: 8px; min-height: 42px; font-size: 14px; line-height: 1.5; color: #4A4A47;">YoY growth in a company founded, scaled, and sold</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENING RECOGNITION -->
+  <section style="background: #121212; color: #F7F6F2;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px;">
+      <div style="width: 84px; height: 6px; background: #E0653A; margin-bottom: 32px;"></div>
+      <h2 class="h2" style="max-width: 1000px;">You built something real. The product works. The technology holds up under pressure.</h2>
+      <p class="disp" style="margin: 28px 0 0; max-width: 820px; font-weight: 400; font-size: clamp(24px, 2.6vw, 36px); line-height: 1.2; letter-spacing: -0.02em; color: #F2916B;">But the company does not land at the same level yet.</p>
+      <div style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 72px;">
+        <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+          <p class="body" style="color: #E4E2DA;">Investors need the long version before they get it. Sales conversations start from zero every time. The story has not caught up to what you built.</p>
+          <p class="body" style="color: #E4E2DA;">You have become the explanation the company runs on, and that does not scale.</p>
+        </div>
+        <div style="flex: 1 1 380px; min-width: 0; border-left: 4px solid #E0653A; padding-left: 32px;">
+          <p class="disp" style="margin: 0; font-weight: 700; font-size: clamp(22px, 2vw, 28px); line-height: 1.3; letter-spacing: -0.015em;">This closes that gap. First the foundation, clear enough to hold under scrutiny. Then growth on top of it, until traction stops depending on you in every room.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT CHANGES -->
+  <section style="border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px;">
+      <div style="margin-bottom: 56px;">
+        <p class="eyebrow" style="margin: 0 0 20px; color: #6B6A66;">Three to six months in</p>
+        <h2 class="h2">What changes.</h2>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; border-top: 2px solid #121212;">
+        <li style="display: flex; gap: 28px; padding: 28px 0; border-bottom: 1px solid #D9D7D0; align-items: flex-start;">
+          <span aria-hidden="true" style="flex: 0 0 28px; width: 28px; height: 4px; margin-top: 18px; background: #E0653A;"></span>
+          <p class="disp" style="margin: 0; max-width: 900px; font-weight: 700; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -0.02em;">The foundation runs in real conversations, not in a folder.</p>
+        </li>
+        <li style="display: flex; gap: 28px; padding: 28px 0; border-bottom: 1px solid #D9D7D0; align-items: flex-start;">
+          <span aria-hidden="true" style="flex: 0 0 28px; width: 28px; height: 4px; margin-top: 18px; background: #E0653A;"></span>
+          <p class="disp" style="margin: 0; max-width: 900px; font-weight: 700; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -0.02em;">The product is clear to people who are not you.</p>
+        </li>
+        <li style="display: flex; gap: 28px; padding: 28px 0; border-bottom: 1px solid #D9D7D0; align-items: flex-start;">
+          <span aria-hidden="true" style="flex: 0 0 28px; width: 28px; height: 4px; margin-top: 18px; background: #E0653A;"></span>
+          <p class="disp" style="margin: 0; max-width: 900px; font-weight: 700; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -0.02em;">Launches, communications and enablement move without you in the loop.</p>
+        </li>
+        <li style="display: flex; gap: 28px; padding: 28px 0; border-bottom: 1px solid #D9D7D0; align-items: flex-start;">
+          <span aria-hidden="true" style="flex: 0 0 28px; width: 28px; height: 4px; margin-top: 18px; background: #E0653A;"></span>
+          <p class="disp" style="margin: 0; max-width: 900px; font-weight: 700; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -0.02em;">The right inbound starts to arrive.</p>
+        </li>
+        <li style="display: flex; gap: 28px; padding: 28px 0; border-bottom: 1px solid #D9D7D0; align-items: flex-start;">
+          <span aria-hidden="true" style="flex: 0 0 28px; width: 28px; height: 4px; margin-top: 18px; background: #E0653A;"></span>
+          <p class="disp" style="margin: 0; max-width: 900px; font-weight: 700; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -0.02em;">Each deal, hire and quarter builds on the last.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section id="proof" style="background: #EFEDE8; border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px 112px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px;">
+        <div>
+          <p class="eyebrow" style="margin: 0 0 20px; color: #6B6A66;">Selected work</p>
+          <h2 class="h2" style="max-width: 720px;">A track record only means something if it moves the needle.</h2>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; border-top: 2px solid #121212;">
+
+        <article style="padding: 48px 0 52px; border-bottom: 1px solid #C9C7BF;">
+          <h3 class="disp" style="margin: 0 0 32px; font-weight: 800; font-stretch: 110%; font-size: 26px; letter-spacing: -0.02em;">Capture6: First Marketing Hire, 0 to 1</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 48px; align-items: start;">
+            <div style="border-top: 1px solid #121212; padding-top: 16px;">
+              <p class="eyebrow" style="margin: 0 0 12px; font-size: 11px; color: #6B6A66;">01 · Foundation</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.55;">Joined as the first marketing hire and set positioning, brand and go-to-market priorities from zero.</p>
+            </div>
+            <div style="border-top: 1px solid #121212; padding-top: 16px;">
+              <p class="eyebrow" style="margin: 0 0 12px; font-size: 11px; color: #6B6A66;">02 · Execution</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.55;">PR, executive thought leadership, events and sales enablement, earning coverage in Forbes and The Verge and a presence at COP28 and NY Climate Week.</p>
+            </div>
+            <div style="border-top: 6px solid #E0653A; padding-top: 14px;">
+              <p class="eyebrow" style="margin: 0 0 8px; font-size: 11px; color: #C4491B;">03 · Result</p>
+              <div class="disp" style="font-weight: 900; font-stretch: 125%; font-size: clamp(56px, 6vw, 88px); line-height: 0.95; letter-spacing: -0.05em; color: #121212;">4<span style="line-height: 0;">×</span></div>
+              <p class="disp" style="margin: 12px 0 0; font-weight: 700; font-size: 18px; line-height: 1.3;">Monthly organic inbound enquiries, within a year.</p>
+            </div>
+          </div>
+        </article>
+
+        <article style="padding: 48px 0 52px; border-bottom: 1px solid #C9C7BF;">
+          <h3 class="disp" style="margin: 0 0 32px; font-weight: 800; font-stretch: 110%; font-size: 26px; letter-spacing: -0.02em;">Skytree: Messaging and Event Conversion</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 48px; align-items: start;">
+            <div style="border-top: 1px solid #121212; padding-top: 16px;">
+              <p class="eyebrow" style="margin: 0 0 12px; font-size: 11px; color: #6B6A66;">01 · Foundation</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.55;">A message house, and the market segmented into 11 industrial verticals.</p>
+            </div>
+            <div style="border-top: 1px solid #121212; padding-top: 16px;">
+              <p class="eyebrow" style="margin: 0 0 12px; font-size: 11px; color: #6B6A66;">02 · Execution</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.55;">Eight events across three continents, webinars and sales enablement, with lead capture and nurture rebuilt in HubSpot.</p>
+            </div>
+            <div style="border-top: 6px solid #E0653A; padding-top: 14px;">
+              <p class="eyebrow" style="margin: 0 0 8px; font-size: 11px; color: #C4491B;">03 · Result</p>
+              <div class="disp" style="font-weight: 900; font-stretch: 125%; font-size: clamp(56px, 6vw, 88px); line-height: 0.95; letter-spacing: -0.05em; color: #121212;">30%</div>
+              <p class="disp" style="margin: 12px 0 0; font-weight: 700; font-size: 18px; line-height: 1.3;">Higher event lead-to-SQL conversion.</p>
+            </div>
+          </div>
+        </article>
+
+        <article style="padding: 48px 0 52px; border-bottom: 1px solid #C9C7BF;">
+          <h3 class="disp" style="margin: 0 0 32px; font-weight: 800; font-stretch: 110%; font-size: 26px; letter-spacing: -0.02em;">OCA: 0 to 1 Function, Revenue Doubled</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 48px; align-items: start;">
+            <div style="border-top: 1px solid #121212; padding-top: 16px;">
+              <p class="eyebrow" style="margin: 0 0 12px; font-size: 11px; color: #6B6A66;">01 · Foundation</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.55;">Built the marketing function from zero, with an integrated acquisition and retention strategy.</p>
+            </div>
+            <div style="border-top: 1px solid #121212; padding-top: 16px;">
+              <p class="eyebrow" style="margin: 0 0 12px; font-size: 11px; color: #6B6A66;">02 · Execution</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.55;">Acquisition and retention across digital channels, run against quarterly OKRs and reported to the board.</p>
+            </div>
+            <div style="border-top: 6px solid #E0653A; padding-top: 14px;">
+              <p class="eyebrow" style="margin: 0 0 8px; font-size: 11px; color: #C4491B;">03 · Result</p>
+              <div class="disp" style="font-weight: 900; font-stretch: 125%; font-size: clamp(56px, 6vw, 88px); line-height: 0.95; letter-spacing: -0.05em; color: #121212;">2<span style="line-height: 0;">×</span></div>
+              <p class="disp" style="margin: 12px 0 0; font-weight: 700; font-size: 18px; line-height: 1.3;">Revenue, at roughly 150% ROMI.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-start;">
+        <div style="flex: 1 1 420px; min-width: 0;">
+          <p class="eyebrow" style="margin: 0 0 14px; font-size: 11px; color: #6B6A66;">Also</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3A3A37;">A 10-person team and a ~$1.5M budget across four brands at Kaplan. Brush It On, founded and grown 250 percent year over year, then sold. Fractional work with Harvest Thermal on positioning, ICP, and content, and with Crbon Labs on rebrand and launch.</p>
+        </div>
+        <div style="flex: 1 1 420px; min-width: 0;">
+          <p class="disp" style="margin: 0 0 12px; font-weight: 700; font-size: 20px; line-height: 1.3;">Different stages, same pattern: build the foundation, then grow on top of it.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3A3A37;">15+ years in marketing and go-to-market leadership. Two marketing functions built from zero. One company founded, scaled, and exited.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 56px;">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;"><a href="https://calendly.com/hello-vivrames/30min" target="_blank" rel="noopener" class="btn eyebrow" style="display: inline-flex; align-items: center; gap: 14px; min-height: 60px; padding: 0 32px; background: #C4491B; color: #FFFFFF; text-decoration: none; font-size: 14px;">Book a conversation <span aria-hidden="true">→</span></a><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B6A66;">30-minute fit check. Not a pitch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section id="how" style="border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px;">
+      <div style="width: 84px; height: 6px; background: #E0653A; margin-bottom: 28px;"></div>
+      <p class="eyebrow" style="margin: 0 0 20px; color: #6B6A66;">How I work</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; align-items: flex-end;">
+        <h2 class="disp" style="margin: 0; flex: 1 1 560px; font-weight: 900; font-stretch: 118%; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.045em;">One path. Two ways in.</h2>
+        <p class="body" style="flex: 1 1 420px; max-width: 520px; font-size: 18px; color: #3A3A37;">There is one path here, not a menu. You can start with the Foundation, or go straight to the Seat if you already know you need ownership now. Both lead to the same place: a company with a foundation strong enough to carry its own growth.</p>
+      </div>
+
+      <!-- SEAT -->
+      <div style="margin-top: 72px; background: #121212; color: #F7F6F2;">
+        <div style="padding: 48px 48px 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;">
+          <p class="eyebrow" style="margin: 0; color: #F2916B;">Seat first · Flagship</p>
+          <p class="eyebrow" style="margin: 0; font-size: 11px; font-weight: 500; color: #B8B6AE;">If you already know you need someone to own this, start here.</p>
+        </div>
+        <div style="padding: 24px 48px 56px; display: flex; flex-wrap: wrap; gap: 48px 72px;">
+          <div style="flex: 3 1 460px; min-width: 0;">
+            <h3 class="disp" style="margin: 0; font-weight: 900; font-stretch: 118%; font-size: clamp(32px, 4vw, 52px); line-height: 1; letter-spacing: -0.04em;">The Clarity-to-Traction Seat</h3>
+            <p style="margin: 28px 0 0; font-size: 18px; line-height: 1.6; color: #E4E2DA;">The multi-month path from a solid foundation to commercial traction, built on end-to-end ownership. Not advice. Not a deck. Someone in the seat, running it, for as long as it takes to turn the foundation into growth.</p>
+            <p style="margin: 20px 0 0; font-size: 16px; line-height: 1.65; color: #C9C7BF;">First the foundation gets locked. Then the motion runs on top of it, shaped to fit what the business actually needs next. The Seat is ownership of the outcome, not a set of deliverables to tick off.</p>
+            <p style="margin: 24px 0 0; padding-top: 16px; border-top: 1px solid #3A3A37; font-size: 13px; line-height: 1.6; color: #B8B6AE;">Where it shows up: communications, website and landing narrative, sales enablement, launches, market presence, demand motions.</p>
+          </div>
+          <div style="flex: 2 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 36px;">
+            <!-- arc -->
+            <div>
+              <p class="eyebrow" style="margin: 0 0 20px; font-size: 11px; color: #B8B6AE;">The arc</p>
+              <ol style="list-style: none; margin: 0; padding: 0;">
+<li style="display: flex; gap: 20px; align-items: baseline; padding: 16px 0; border-top: 1px solid #3A3A37;"><span class="disp" style="flex: 0 0 28px; font-weight: 800; font-size: 16px; color: #E0653A;">01</span><span class="disp" style="font-weight: 800; font-size: 22px; letter-spacing: -0.01em;">Foundation locked</span></li>
+<li style="display: flex; gap: 20px; align-items: baseline; padding: 16px 0; border-top: 1px solid #3A3A37;"><span class="disp" style="flex: 0 0 28px; font-weight: 800; font-size: 16px; color: #E0653A;">02</span><span class="disp" style="font-weight: 800; font-size: 22px; letter-spacing: -0.01em;">Motion in market</span></li>
+<li style="display: flex; gap: 20px; align-items: baseline; padding: 16px 0; border-top: 1px solid #3A3A37; border-bottom: 1px solid #3A3A37;"><span class="disp" style="flex: 0 0 28px; font-weight: 800; font-size: 16px; color: #E0653A;">03</span><span class="disp" style="font-weight: 800; font-size: 22px; letter-spacing: -0.01em;">Traction</span></li>
+</ol>
+            </div>
+            <dl style="margin: 0; border-top: 1px solid #3A3A37;">
+              <div style="padding: 18px 0; border-bottom: 1px solid #3A3A37;"><dt class="eyebrow" style="font-size: 10px; color: #B8B6AE;">Length</dt><dd style="margin: 8px 0 0; font-size: 16px; line-height: 1.5;">3 to 6 months. Six is the ideal length to let the foundation hold, the motion run, and traction actually show up.</dd></div>
+              <div style="padding: 18px 0; border-bottom: 1px solid #3A3A37;"><dt class="eyebrow" style="font-size: 10px; color: #B8B6AE;">Investment</dt><dd class="disp" style="margin: 8px 0 0; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">Scoped in conversation</dd><dd style="margin: 6px 0 0; font-size: 14px; color: #C9C7BF;">Once priorities are clear.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOUNDATION -->
+      <div style="margin-top: 24px; border: 1px solid #121212; background: #FFFFFF;">
+        <div style="padding: 48px 48px 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;">
+          <p class="eyebrow" style="margin: 0; color: #C4491B;">Foundation · On-ramp</p>
+          <p class="eyebrow" style="margin: 0; font-size: 11px; font-weight: 500; color: #6B6A66;">If you are not ready to commit to ownership yet, or you want the foundation locked before anything runs, start here.</p>
+        </div>
+        <div style="padding: 24px 48px 48px; display: flex; flex-wrap: wrap; gap: 48px 72px;">
+          <div style="flex: 3 1 460px; min-width: 0;">
+            <h3 class="disp" style="margin: 0; font-weight: 900; font-stretch: 118%; font-size: clamp(28px, 3.2vw, 42px); line-height: 1; letter-spacing: -0.04em;">The Clarity-to-Traction Foundation</h3>
+            <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6; color: #23272E;">A 4 week practical sprint. Built to produce something you can act on immediately, not another strategy document that sits in a drive.</p>
+            <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.65; color: #3A3A37;">You walk away with positioning, messaging, and ICP, a concrete execution plan, and a clear path into the Seat if that is the right next step. Where it fits, you also get light practical assets, enablement starters, priority communications, enough to get moving, not an exhaustive kit.</p>
+            <p class="disp" style="margin: 24px 0 0; font-weight: 700; font-size: 20px;">Four weeks. Foundation and plan. Then run it, or run it with me in the Seat.</p>
+          </div>
+          <div style="flex: 2 1 320px; min-width: 0;">
+            <dl style="margin: 0; border-top: 1px solid #C9C7BF;">
+              <div style="padding: 18px 0; border-bottom: 1px solid #C9C7BF;"><dt class="eyebrow" style="font-size: 10px; color: #6B6A66;">Length</dt><dd class="disp" style="margin: 8px 0 0; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">4 weeks</dd></div>
+              <div style="padding: 18px 0; border-bottom: 1px solid #C9C7BF;"><dt class="eyebrow" style="font-size: 10px; color: #6B6A66;">Investment</dt><dd class="disp" style="margin: 8px 0 0; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">Fixed fee</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: center; justify-content: space-between;">
+        <p class="disp" style="margin: 0; max-width: 720px; font-weight: 600; font-size: 20px; line-height: 1.4; letter-spacing: -0.01em;">Two ways in, same destination. The Seat if you need someone running this now. The Foundation if you want the plan in hand first.</p>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;"><a href="https://calendly.com/hello-vivrames/30min" target="_blank" rel="noopener" class="btn eyebrow" style="display: inline-flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 36px; background: #C4491B; color: #FFFFFF; text-decoration: none; font-size: 15px;">Book a conversation <span aria-hidden="true">→</span></a><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B6A66;">30-minute fit check. Not a pitch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section style="background: #EFEDE8; border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px;">
+      <p class="eyebrow" style="margin: 0 0 20px; color: #6B6A66;">Who this is for</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 40px 80px;">
+        <h2 class="h2" style="flex: 1 1 420px;">Funded founders whose market still struggles to read the product.</h2>
+        <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 18px;">
+          <p class="body" style="color: #3A3A37;">Late seed to Series A. Founders, CEOs and commercial co-founders.</p>
+          <p class="body" style="color: #3A3A37;">Five to 25 people and no real marketing function. Marketing is you, or one junior generalist holding the commercial side together.</p>
+          <p class="body" style="color: #3A3A37;">Products that need explaining before they sell: deep tech, climate and energy, technical B2B, and hard-to-explain consumer products.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 88px;">
+        <h3 class="disp" style="margin: 0 0 24px; font-weight: 800; font-stretch: 110%; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1; letter-spacing: -0.025em;">Fit signals worth recognizing</h3>
+        <ul style="margin: 0; padding: 0; list-style: none; border-top: 2px solid #121212;">
+          <li style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #C9C7BF; font-size: 16px; line-height: 1.5;"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 3px; margin-top: 11px; background: #E0653A;"></span>The product has outpaced the company's ability to land it, so the story gets reinvented in every room</li>
+          <li style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #C9C7BF; font-size: 16px; line-height: 1.5;"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 3px; margin-top: 11px; background: #E0653A;"></span>No one owns go-to-market and the in-market motion, so good tactics keep landing without a foundation underneath them</li>
+          <li style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #C9C7BF; font-size: 16px; line-height: 1.5;"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 3px; margin-top: 11px; background: #E0653A;"></span>Launches, communications, enablement, and market presence are unowned or inconsistent</li>
+          <li style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #C9C7BF; font-size: 16px; line-height: 1.5;"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 3px; margin-top: 11px; background: #E0653A;"></span>The company feels less decided and less credible than the technology actually warrants</li>
+          <li style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #C9C7BF; font-size: 16px; line-height: 1.5;"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 3px; margin-top: 11px; background: #E0653A;"></span>Sales and investor conversations keep stalling on how the company lands, not on the product itself</li>
+        </ul>
+        <p style="margin: 28px 0 0; font-size: 16px; line-height: 1.6; color: #6B6A66;">Not for pre-product teams, or anyone who needs a deck and nothing more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORTING CAPABILITIES -->
+  <section aria-label="Supporting capabilities" style="border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 40px; text-align: left;">
+      <p class="disp" style="margin: 0; font-weight: 700; font-size: clamp(15px, 1.5vw, 19px); line-height: 1.6; letter-spacing: -0.005em; color: #121212;">The work shows up in sales calls, launches, the website and investor conversations.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px; display: flex; flex-wrap: wrap; gap: 48px 80px; align-items: flex-start;">
+      <img src="/images/portrait.jpg" alt="Portrait of Viviana Rames" width="260" height="260" style="flex: 0 0 auto; display: block; width: 260px; max-width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #D9D7D0;">
+      <div style="flex: 1 1 480px; min-width: 0;">
+        <p class="eyebrow" style="margin: 0 0 24px; color: #6B6A66;">About</p>
+        <h2 class="h2" style="font-size: clamp(30px, 3.6vw, 50px);">15+ years turning complex products into commercial momentum across climate, technical B2B, and long-cycle buys.</h2>
+        <p style="margin: 28px 0 0; max-width: 640px; font-size: 18px; line-height: 1.65; color: #3A3A37;">I have built marketing functions from zero, reported to boards, run multi-continent programs, and founded, scaled, and sold my own company. I work where strategy meets execution, alongside founders, technical teams, and commercial leaders, building a foundation strong enough to carry real growth, not another deck that sits in a folder.</p>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px;">
+          <a href="https://www.linkedin.com/in/vivianarames" style="font-weight: 600; text-underline-offset: 4px;">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: #EFEDE8; border-bottom: 1px solid #D9D7D0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 120px 40px; display: flex; flex-wrap: wrap; gap: 40px 80px;">
+      <div style="flex: 1 1 280px;">
+        <p class="eyebrow" style="margin: 0 0 20px; color: #6B6A66;">FAQ</p>
+        <h2 class="h2">Straight answers.</h2>
+      </div>
+      <div style="flex: 3 1 560px; min-width: 0; border-top: 2px solid #121212;">
+
+        <details class="faq" style="border-bottom: 1px solid #C9C7BF; padding: 24px 0;">
+          <summary class="disp" style="display: flex; justify-content: space-between; gap: 24px; font-weight: 700; font-size: 22px; line-height: 1.3;"><span>Should I start with the Foundation or go straight to the Seat?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+          <div style="margin-top: 16px; max-width: 720px; font-size: 16px; line-height: 1.65; color: #3A3A37; display: flex; flex-direction: column; gap: 14px;">
+            <p style="margin: 0;">If you already know you need someone to own this, go straight to the Seat. That is the common path for founders who have felt the cost of carrying the company alone for long enough.</p>
+            <p style="margin: 0;">Start with the Foundation if you want the foundation built first, with a concrete plan in hand, before committing to a multi-month engagement. It is a real product on its own, not a trial.</p>
+          </div>
+        </details>
+
+        <details class="faq" style="border-bottom: 1px solid #C9C7BF; padding: 24px 0;">
+          <summary class="disp" style="display: flex; justify-content: space-between; gap: 24px; font-weight: 700; font-size: 22px; line-height: 1.3;"><span>Is this a strategy deck, or do you actually run it?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+          <div style="margin-top: 16px; max-width: 720px; font-size: 16px; line-height: 1.65; color: #3A3A37;">
+            <p style="margin: 0;">I run it. The Seat is mostly execution: communications, the website, sales enablement, launches and demand, shaped by whatever the priorities call for. The foundation is what keeps all of it coherent.</p>
+          </div>
+        </details>
+
+        <details class="faq" style="border-bottom: 1px solid #C9C7BF; padding: 24px 0;">
+          <summary class="disp" style="display: flex; justify-content: space-between; gap: 24px; font-weight: 700; font-size: 22px; line-height: 1.3;"><span>We already have a junior marketer. Do we need this?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+          <div style="margin-top: 16px; max-width: 720px; font-size: 16px; line-height: 1.65; color: #3A3A37; display: flex; flex-direction: column; gap: 14px;">
+            <p style="margin: 0;">A junior marketer can execute well, but they should not be expected to own the positioning, GTM strategy and commercial planning for the business. That is where companies can end up with good tactics but no clear direction, while the founder is still carrying the bigger commercial decisions.</p>
+            <p style="margin: 0;">The Seat provides that senior-level ownership and can work alongside an existing marketer, giving them clear priorities and a stronger foundation to execute against.</p>
+          </div>
+        </details>
+
+        <details class="faq" style="border-bottom: 1px solid #C9C7BF; padding: 24px 0;">
+          <summary class="disp" style="display: flex; justify-content: space-between; gap: 24px; font-weight: 700; font-size: 22px; line-height: 1.3;"><span>When does the Seat make sense instead of a permanent hire?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+          <div style="margin-top: 16px; max-width: 720px; font-size: 16px; line-height: 1.65; color: #3A3A37; display: flex; flex-direction: column; gap: 14px;">
+            <p style="margin: 0;">The Seat works when a company needs senior marketing ownership now, but is not yet ready to build the permanent function around it. It creates the positioning, priorities and in-market motion the business needs today, while making the longer-term marketing structure much clearer.</p>
+            <p style="margin: 0;">For some companies, that becomes an ongoing fractional model. For others, it creates a stronger foundation for the permanent team or leader that comes next.</p>
+          </div>
+        </details>
+
+        <details class="faq" style="border-bottom: 1px solid #C9C7BF; padding: 24px 0;">
+          <summary class="disp" style="display: flex; justify-content: space-between; gap: 24px; font-weight: 700; font-size: 22px; line-height: 1.3;"><span>What does this cost, and what am I committing to?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+          <div style="margin-top: 16px; max-width: 720px; font-size: 16px; line-height: 1.65; color: #3A3A37;">
+            <p style="margin: 0;">The Foundation is a fixed fee for four weeks, ending in a clear foundation and plan. The Seat runs three to six months, six is ideal, with the monthly fee scoped in conversation based on priorities. Either way, you know what you are getting and for how long before anything starts.</p>
+          </div>
+        </details>
+
+        <details class="faq" style="border-bottom: 1px solid #C9C7BF; padding: 24px 0;">
+          <summary class="disp" style="display: flex; justify-content: space-between; gap: 24px; font-weight: 700; font-size: 22px; line-height: 1.3;"><span>What happens on the first conversation?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+          <div style="margin-top: 16px; max-width: 720px; font-size: 16px; line-height: 1.65; color: #3A3A37;">
+            <p style="margin: 0;">It is a short conversation to check fit, not a pitch. We talk about where the company is, where growth is stalling, and whether this is the right next step. If it is not a fit, you will hear that directly.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="contact" style="background: #121212; color: #F7F6F2;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 128px 40px 120px;">
+      <div style="width: 84px; height: 6px; background: #E0653A; margin-bottom: 32px;"></div>
+      <h2 class="disp" style="margin: 0; max-width: 1040px; font-weight: 800; font-stretch: 100%; font-size: clamp(34px, 4.8vw, 68px); line-height: 1.04; letter-spacing: -0.04em; text-wrap: balance;">If the product is strong and the company does not land that way yet, that gap is closeable.</h2>
+      <p style="margin: 32px 0 0; max-width: 620px; font-size: 19px; line-height: 1.6; color: #E4E2DA;">The conversation is to check fit, not to pitch you. Only a small number of Seats run at a time, so timing matters more than urgency.</p>
+      <div style="margin-top: 52px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 36px;">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;"><a href="https://calendly.com/hello-vivrames/30min" target="_blank" rel="noopener" class="btn-dark eyebrow" style="display: inline-flex; align-items: center; gap: 14px; min-height: 72px; padding: 0 44px; background: #C4491B; color: #FFFFFF; text-decoration: none; font-size: 16px;">Book a conversation <span aria-hidden="true">→</span></a><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #B8B6AE;">30-minute fit check. Not a pitch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #121212; color: #B8B6AE;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 56px 40px 32px; display: flex; flex-wrap: wrap; gap: 32px 64px; justify-content: space-between;">
+      <div style="max-width: 560px;">
+        <p class="disp" style="margin: 0 0 16px; font-weight: 800; font-stretch: 112%; font-size: 24px; line-height: 1.15; letter-spacing: -0.025em; color: #F7F6F2;">As commercially compelling as you are technically strong.</p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6;">Viviana Rames. Marketing and go-to-market ownership for complex and emerging technology companies.</p>
+      </div>
+      <p class="eyebrow" style="margin: 0; font-size: 11px; font-weight: 500; display: flex; flex-wrap: wrap; gap: 12px 24px; align-self: flex-end;">
+        <a href="https://www.linkedin.com/in/vivianarames" style="color: #F7F6F2; text-underline-offset: 4px;">LinkedIn</a>
+        <a href="mailto:hello@vivrames.com" style="color: #F7F6F2; text-underline-offset: 4px;">Email</a>
+        <a href="https://www.vivrames.com" style="color: #F7F6F2; text-underline-offset: 4px;">vivrames.com</a>
+      </p>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 40px 32px;">
+      <span class="eyebrow" style="font-size: 10px; font-weight: 500;">© 2026 Viviana Rames</span>
+    </div>
+  </footer>
+
+</div>
+
+  </body>
+</html>

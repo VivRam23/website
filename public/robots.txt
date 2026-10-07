@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vivrames.com/sitemap-index.xml
+Sitemap: https://www.vivrames.com/sitemap-index.xml

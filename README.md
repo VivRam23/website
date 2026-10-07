@@ -1,62 +1,19 @@
-# vivrames.com
+# vivrames.com (Astro + Tailwind, Vercel)
 
-Viviana Rames' professional site — built with [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com). Fully static, server-rendered HTML (no client-side rendering required for content), deployable to Vercel.
+Pinned versions (no ^ or ~): astro 4.16.19, @astrojs/sitemap 3.6.0, @astrojs/tailwind 5.1.3, tailwindcss 3.4.14.
 
-**Visual identity (v2):** off-white background, near-black type, one orange accent (`#F15A24`), Archivo (display) + Inter (body). No olive/serif/cream — that was the v1 palette and has been fully replaced. See `tailwind.config.mjs` for tokens.
+## Run
+    npm install
+    npm run dev      # local
+    npm run build    # static output in dist/
 
-## Structure
+Deploy: import the GitHub repo in Vercel (framework preset: Astro, defaults are fine).
+Sitemap is generated at /sitemap-index.xml; robots.txt points to it.
 
-```
-src/
-  data/site.ts        ← ALL editable copy lives here: hero text, stats, case studies,
-                         engagement models, contact email. Start here for content edits.
-  layouts/
-    BaseLayout.astro   ← <head>, SEO meta, OG/Twitter tags, JSON-LD schema, nav + footer wrapper
-  components/          ← one component per homepage/services-page section
-  pages/
-    index.astro        ← homepage
-    services.astro       ← /services — four service areas + engagement models
-    about.astro          ← /about — full bio
-public/
-  images/               ← logos, case-study images, portrait, OG image, favicon
-  robots.txt
-```
-
-`sitemap.xml` is generated automatically at build time by `@astrojs/sitemap` — you won't find it in the repo, it appears in `dist/` after `npm run build`.
-
-`vercel.json` redirects the retired `/work` route (301) to `/services`, since the detailed case-study page no longer exists.
-
-## Local development
-
-**Dependency versions are pinned exactly** (no `^`/`~`) in `package.json`. `@astrojs/sitemap` has a known compatibility break with certain Astro versions that surfaces as `Cannot read properties of undefined (reading 'reduce')` during build — don't loosen or bump these versions without testing the build first.
-
-```bash
-npm install
-npm run dev
-```
-
-Then open http://localhost:4321.
-
-## Build
-
-```bash
-npm run build
-npm run preview   # serve the production build locally to sanity-check it
-```
-
-## Deploying to Vercel
-
-1. Push this repo to GitHub.
-2. In Vercel, "Add New Project" → import the repo. Vercel auto-detects Astro — no config needed.
-3. Set the production domain to `vivrames.com` in Vercel's domain settings (and point your DNS at Vercel per their instructions).
-4. Every push to `main` redeploys automatically.
-
-## Editing content later
-
-Almost everything — hero copy, proof stats, case study text, engagement models, contact email — lives in `src/data/site.ts`. Editing that file is usually enough; you shouldn't need to touch the `.astro` component files for a copy change. Just ask Claude (Claude Code, or paste the file into a chat) to make the edit and it can go straight to that file.
-
-To swap the portrait or add a new case-study image, drop the file into `public/images/` and reference it as `/images/filename.jpg` from `site.ts`.
-
-## Note on this build
-
-This project was authored without a live build step (no network access in the authoring environment to run `npm install`). Everything follows known-correct Astro + Tailwind patterns, but please run `npm install && npm run build` after cloning and flag anything that breaks — most likely a small import or syntax fix.
+## Before you replace your live site
+- Add your existing `public/images/og-default.jpg` and favicon (a placeholder `favicon.svg` is included).
+- Merge any structured data from your current layout into the JSON-LD block at the top of `src/pages/index.astro`.
+- Keep your existing /services and /about pages if you still want them; this package only contains the new homepage.
+- The portrait (`public/images/portrait.jpg`) is 400px and shown at 260px; swap in a larger file when you have one.
+- The page styling is inline, lifted from the approved design; Tailwind is installed with base styles only.
+- Booking buttons point to https://calendly.com/hello-vivrames/30min.

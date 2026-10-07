@@ -3,11 +3,6 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://vivrames.com',
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap(),
-  ],
+  site: 'https://www.vivrames.com',
+  integrations: [tailwind(), sitemap()],
 });

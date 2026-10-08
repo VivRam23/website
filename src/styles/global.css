@@ -23,3 +23,4 @@ a{color:#121212}
 .faq-ico::before{content:'+'}
 .faq[open] .faq-ico::before{content:'\2212'}
 @media (max-width: 900px){.orb{display:none !important}}
+@media (max-width: 700px){.statgrid{grid-template-columns:1fr !important;padding:0 24px !important}.stat{padding:24px 0 !important;border-right:0 !important;border-bottom:1px solid #D9D7D0}.stat:last-child{border-bottom:0}.stat > div:last-child{min-height:0 !important}}

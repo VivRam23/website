@@ -1,0 +1,342 @@
+{
+  "meta": {
+    "title": "Case studies — Viviana Rames",
+    "description": "Selected marketing case studies from Capture6, Skytree, Kaplan Business School, Brush It On and Harvest Thermal."
+  },
+  "intro": {
+    "eyebrow": "Portfolio",
+    "heading": "Selected case studies",
+    "text": "How I've positioned complex products, built brands and created demand, for consumer and B2B audiences."
+  },
+  "cases": [
+    {
+      "id": "capture6",
+      "company": "Capture6",
+      "role": "Director of Marketing",
+      "title": "Building a brand and demand from zero",
+      "outcome": "As first marketing hire at a seed-stage carbon removal and water recovery company, I grew organic inbound inquiries 4×, with coverage in Forbes and The Verge.",
+      "toggleLabel": "Read the case study",
+      "lead": {
+        "src": "/images/portfolio/capture6-project-monarch.gif",
+        "alt": "Animated diagram of Project Monarch showing water treatment, carbon removal, mineralized carbonates and freshwater recovery",
+        "width": 2024,
+        "height": 788,
+        "staticSrc": "/images/portfolio/capture6-project-monarch-static.png"
+      },
+      "sections": [
+        {
+          "label": "The challenge",
+          "text": "A seed-stage climate-tech company with no marketing function and a technology few buyers understood."
+        },
+        {
+          "label": "My role",
+          "text": "First marketing hire. Built and led a team of two, plus agency and freelance partners."
+        },
+        {
+          "label": "What I did",
+          "items": [
+            "Mapped target segments and ICPs, then built the brand, positioning and three core market propositions.",
+            "Built the website, HubSpot CRM, content, PR, events and sales enablement.",
+            "Led communications for Project Monarch, Capture6's first integrated water recovery and direct air capture project, including the animated explainer above, developed with an external designer.",
+            "Ran executive thought leadership and media relations.",
+            "Set up reporting, ran marketing against quarterly OKRs and reported performance to the board."
+          ]
+        },
+        {
+          "label": "The result",
+          "text": "Organic inbound inquiries grew 4×, with coverage in Forbes and The Verge and a company presence at COP28 and New York Climate Week."
+        }
+      ],
+      "media": [
+        [
+          {
+            "src": "/images/portfolio/capture6-the-verge.jpg",
+            "alt": "The Verge article about a startup that removes carbon and desalinates seawater, image credited to Capture6",
+            "width": 1400,
+            "height": 1005,
+            "caption": "The Verge, January 2024"
+          },
+          {
+            "src": "/images/portfolio/capture6-forbes.jpg",
+            "alt": "Forbes article: And Suddenly, The Race For Carbon Capture Is On",
+            "width": 1400,
+            "height": 1000,
+            "caption": "Forbes, June 2022"
+          }
+        ],
+        [
+          {
+            "src": "/images/portfolio/capture6-cop28-announcement.jpg",
+            "alt": "Announcement graphic: Capture6 co-founder Luke Shors speaking at COP28, December 10, 2023",
+            "width": 897,
+            "height": 900,
+            "caption": "COP28, Dubai: speaking announcement for Capture6's co-founder"
+          },
+          {
+            "src": "/images/portfolio/capture6-aladyr-congress.jpg",
+            "alt": "Capture6's VP of Business Operations on stage at the ALADYR International Congress in Santiago, Chile",
+            "width": 751,
+            "height": 1000,
+            "caption": "ALADYR International Congress, Santiago: Capture6's VP of Business Operations on water security and reuse"
+          }
+        ],
+        [
+          {
+            "src": "/images/portfolio/capture6-website.jpg",
+            "alt": "Capture6 website homepage: Recover water. Remove carbon. Multiply value.",
+            "width": 1400,
+            "height": 670,
+            "caption": "Capture6 website"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "skytree",
+      "company": "Skytree",
+      "role": "Head of Global Communications",
+      "title": "Events that convert, and a launch that landed",
+      "outcome": "For a direct air capture company expanding into North America, I lifted event lead-to-SQL conversion 30% and led communications for the $100M Project Concho.",
+      "toggleLabel": "Read the case study",
+      "lead": {
+        "src": "/images/portfolio/skytree-event-booth.jpg",
+        "alt": "Skytree booth at an industry event, and Skytree's VP of Sales speaking on stage",
+        "width": 1140,
+        "height": 550
+      },
+      "sections": [
+        {
+          "label": "The challenge",
+          "text": "Turn trade-show presence into qualified pipeline while expanding into North America."
+        },
+        {
+          "label": "My role",
+          "text": "Led global communications, events and launch communications."
+        },
+        {
+          "label": "What I did",
+          "items": [
+            "Built the 2025 message house and repositioned the company for industrial buyers.",
+            "Managed participation in eight industry events across three continents, and produced webinars.",
+            "Rebuilt lead capture and nurture in HubSpot.",
+            "Secured conference speaking slots for Skytree's CEO and VPs, including the VP of Sales (pictured above).",
+            "Led communications for Project Concho, plus joint announcements with Deep Sky and Return Carbon."
+          ]
+        },
+        {
+          "label": "The result",
+          "text": "Lead-to-SQL conversion up 30%, with coverage in Utility Dive and The Next Web."
+        }
+      ],
+      "media": [
+        [
+          {
+            "src": "/images/portfolio/skytree-message-house.jpg",
+            "alt": "Skytree message house: core message, four pillars and values",
+            "width": 1600,
+            "height": 748,
+            "caption": "Message house for Skytree's 2025 positioning and North American expansion (simplified; confidential proof points removed)"
+          }
+        ],
+        [
+          {
+            "src": "/images/portfolio/skytree-cumulus-video.jpg",
+            "alt": "Still from Skytree's Cumulus explainer video",
+            "width": 648,
+            "height": 400,
+            "caption": "Skytree Cumulus: how it works",
+            "href": "https://drive.google.com/file/d/1z2l6efyiunfUB7EzU8rNZJU0yY7NAUgb/view",
+            "linkLabel": "Watch the video"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "kaplan",
+      "company": "Kaplan Business School",
+      "role": "Head of Marketing",
+      "title": "Defining a brand, from research to every touchpoint",
+      "outcome": "I led research into why students choose a business school, then built the Kaplan Business School brand around one idea: belonging. The rollout contributed to ~30% YoY enrolment growth.",
+      "toggleLabel": "Read the case study",
+      "lead": {
+        "src": "/images/portfolio/kaplan-brand-cover.jpg",
+        "alt": "Cover of the Kaplan Business School brand strategy: Defining our brand, by Viviana Rames",
+        "width": 1500,
+        "height": 1125
+      },
+      "sections": [
+        {
+          "label": "The challenge",
+          "text": "Give Kaplan Business School a clear position against Australian universities, within Kaplan's global “Building Futures” brand, for both domestic and international students."
+        },
+        {
+          "label": "The insight",
+          "text": "Research found six drivers of purchase intent. “Supportive” was the strongest, and the one students least associated with KBS. Domestic and international students also saw the school very differently."
+        },
+        {
+          "label": "What I did",
+          "items": [
+            "Led the research with an external customer-experience agency, combining a subconscious association test with a student questionnaire.",
+            "Mapped KBS and its competitors on a brand archetype model, and positioned KBS around belonging.",
+            "Defined the value proposition through three pillars: Inclusive, Responsive and Nurturing.",
+            "Set the messaging for every stage of the student lifecycle, from choosing a school to staying connected as alumni.",
+            "Rolled the brand out across everything: a new website, agent collateral, social, student experience and communications."
+          ]
+        },
+        {
+          "label": "The result",
+          "text": "One brand idea, grounded in what students said mattered most, applied consistently from first search to graduation. Alongside the Student Recruitment team's work, the rollout contributed to ~30% YoY enrolment growth."
+        }
+      ],
+      "media": [
+        [
+          {
+            "src": "/images/portfolio/kaplan-brand-strategy.jpg",
+            "alt": "Kaplan brand strategy: the global Building Futures brand idea and mission statement",
+            "width": 1500,
+            "height": 1125,
+            "caption": "The global brand KBS had to sit within"
+          },
+          {
+            "src": "/images/portfolio/kaplan-purchase-drivers.jpg",
+            "alt": "Diagram of the six drivers of purchase intent: supportive, helpful, multicultural, expert, I like it, inspiring",
+            "width": 1500,
+            "height": 1125,
+            "caption": "Research: six drivers of purchase intent"
+          }
+        ],
+        [
+          {
+            "src": "/images/portfolio/kaplan-archetype-competitors.jpg",
+            "alt": "Brand archetype wheel mapping Kaplan Business School against Australian universities",
+            "width": 1500,
+            "height": 1125,
+            "caption": "Brand archetypes: KBS against its competitors"
+          },
+          {
+            "src": "/images/portfolio/kaplan-belonging.jpg",
+            "alt": "Belonging at the centre of three pillars: Inclusive, Responsive and Nurturing",
+            "width": 1500,
+            "height": 1125,
+            "caption": "The brand idea and its three pillars"
+          }
+        ],
+        [
+          {
+            "src": "/images/portfolio/kaplan-student-lifecycle.jpg",
+            "alt": "Student lifecycle wheel: make your choice, apply, get ready, welcome, learn, stay connected",
+            "width": 1500,
+            "height": 1125,
+            "caption": "Applying the brand across the student lifecycle",
+            "maxWidth": 640
+          }
+        ]
+      ]
+    },
+    {
+      "id": "brush-it-on",
+      "company": "Brush It On",
+      "role": "Founder & Director",
+      "title": "A consumer brand, from founding to sale",
+      "outcome": "I founded a sustainable personal-care brand, grew it 250% YoY to 150+ retail and wholesale partners across Australia, and sold it in 2022.",
+      "toggleLabel": "Read the case study",
+      "lead": {
+        "src": "/images/portfolio/brushiton-product-range.jpg",
+        "alt": "Brush It On product range: bamboo toothbrushes, straws, cotton buds, dental floss and cutlery",
+        "width": 1400,
+        "height": 981
+      },
+      "sections": [
+        {
+          "label": "The challenge",
+          "text": "Launch a new sustainable consumer brand and build demand online and in retail."
+        },
+        {
+          "label": "My role",
+          "text": "Founder, owning brand, product, marketing and sales."
+        },
+        {
+          "label": "What I did",
+          "items": [
+            "Built the brand identity and a sustainability-led value proposition.",
+            "Developed and launched a range of 40+ products.",
+            "Ran DTC e-commerce, creator and influencer partnerships, and PR.",
+            "Built the wholesale network, supported by a wholesale catalogue."
+          ]
+        },
+        {
+          "label": "The result",
+          "text": "250% YoY growth to ~A$300K annual revenue, 150+ retail and wholesale partners across Australia, and the business sold in 2022."
+        }
+      ],
+      "media": [
+        [
+          {
+            "src": "/images/portfolio/brushiton-gift-box.jpg",
+            "alt": "Brush It On gift box with branded packaging",
+            "width": 950,
+            "height": 1112,
+            "caption": "Gift box and packaging",
+            "maxWidth": 300
+          }
+        ],
+        [
+          {
+            "src": "/images/portfolio/brushiton-creator-posts.jpg",
+            "alt": "Instagram posts by creators tagging Brush It On, including a van-life post",
+            "width": 1400,
+            "height": 927,
+            "caption": "Creator posts featuring the brand"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "harvest-thermal",
+      "company": "Harvest Thermal",
+      "role": "Fractional engagement",
+      "title": "Selling a high-ticket upgrade to design-conscious homeowners",
+      "outcome": "A campaign strategy for affluent Bay Area Eichler owners, built on one insight: their biggest barrier to going electric wasn't cost, it was protecting their home's architecture.",
+      "toggleLabel": "Read the case study",
+      "lead": {
+        "src": "/images/portfolio/harvest-eichler-flyer-top.jpg",
+        "alt": "Top of the Harvest flyer: Electrify your Eichler without architectural compromise",
+        "width": 935,
+        "height": 360
+      },
+      "sections": [
+        {
+          "label": "The challenge",
+          "text": "Persuade affluent Bay Area Eichler owners, who prize their homes' mid-century architecture, to replace gas heating with a heat pump and thermal battery."
+        },
+        {
+          "label": "The insight",
+          "text": "For these owners, the biggest barrier wasn't cost. It was fear that a standard retrofit would cut into the clean walls and wood ceilings that define an Eichler. But their radiant floors are already ideal for a heat pump."
+        },
+        {
+          "label": "What I did",
+          "items": [
+            "Defined positioning, ICPs and messaging.",
+            "Developed the campaign strategy for the Eichler segment.",
+            "Shaped a campaign that leads with preserving the architecture, explains the system in three steps, removes the price objection with $0-down financing, and invites owners to a 2-minute Home Fit Check."
+          ]
+        }
+      ],
+      "media": [
+        [
+          {
+            "src": "/images/portfolio/harvest-eichler-flyer.jpg",
+            "alt": "Full Harvest flyer with problem, fit, how it works, financing and a QR code call to action",
+            "width": 935,
+            "height": 1210,
+            "caption": "Campaign flyer for Bay Area Eichler homeowners",
+            "maxWidth": 480
+          }
+        ]
+      ]
+    }
+  ],
+  "contact": {
+    "heading": "Let's talk."
+  }
+}
